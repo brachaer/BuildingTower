@@ -57,7 +57,7 @@
 
         private static void PrintTriangle(int height, int width)
         {
-            if (width % 2 == 1 && width < 2 * height && width>5)
+            if (width % 2 == 1 && width < 2 * height && width>=5)
             {
                 const int FIRST_ROW = 1;
                 const int DIFFERENCE_TO_ODD_NUM=2;
@@ -67,7 +67,7 @@
                 int rows = middleRows / (maxWidthForMiddleRows / DIFFERENCE_TO_ODD_NUM);
                 int extraRows = (middleRows % (maxWidthForMiddleRows / DIFFERENCE_TO_ODD_NUM));
                 int numAsterisks = FIRST_ROW+DIFFERENCE_TO_ODD_NUM;
-
+                
                 PrintRow(FIRST_ROW, width);
                
                 for (int i = 1; i <=middleRows; i +=rows)
